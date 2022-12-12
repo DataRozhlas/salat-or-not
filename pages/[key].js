@@ -8,10 +8,6 @@ import RelatedArticles from "../components/RelatedArticles";
 import ResultsPanel from "../components/ResultsPanel";
 import styles from "../styles/Home.module.css";
 
-const imgLoader = ({ src, width, quality }) => {
-  return `https://data.irozhlas.cz/salat-or-not${src}-300.png`;
-};
-
 const DetailsPage = props => {
   useEffect(() => {
     const url =
@@ -84,9 +80,8 @@ const DetailsPage = props => {
           ).toLocaleString("cs-CZ")} duelů`}</h3>
           <div className={styles.candidateProfileContainer}>
             <Image
-              loader={imgLoader}
               className={styles.image}
-              src={`/img/${candidateDetails.key}`}
+              src={`https://data.irozhlas.cz/salat-or-not/img/${candidateDetails.key}-300.png`}
               alt={candidateDetails.name}
               width={300}
               height={300}

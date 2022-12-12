@@ -13,8 +13,8 @@ const RelatedArticles = props => {
       });
   }, [props.tag]);
 
-  return (
-    articles.length > 0 && (
+  if (articles.length > 0)
+    return (
       <div className={styles.container}>
         <h3>{`Poslední články o ${props.name ?? "prezidentské volbě"}`}</h3>
         <ul className={styles.list}>
@@ -33,8 +33,8 @@ const RelatedArticles = props => {
           })}
         </ul>
       </div>
-    )
-  );
+    );
+  return <div></div>;
 };
 
 export default RelatedArticles;

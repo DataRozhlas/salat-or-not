@@ -2,10 +2,6 @@ import React from "react";
 import Image from "next/image";
 import styles from "../styles/Item.module.css";
 
-const imgLoader = ({ src, width, quality }) => {
-  return `https://data.irozhlas.cz/salat-or-not${src}-300.png`;
-};
-
 const Item = props => {
   return (
     <button
@@ -17,9 +13,8 @@ const Item = props => {
     >
       <div className={styles["image-wrapper"]}>
         <Image
-          loader={imgLoader}
           className={styles.image}
-          src={`/img/${props.candidate.key}`}
+          src={`https://data.irozhlas.cz/salat-or-not/img/${props.candidate.key}-300.png`}
           alt={props.candidate.name}
           width={300}
           height={300}

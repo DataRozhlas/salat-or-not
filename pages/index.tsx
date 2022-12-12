@@ -7,7 +7,7 @@ import HistoryPanel from "../components/HistoryPanel";
 import RelatedArticles from "../components/RelatedArticles";
 import styles from "../styles/Home.module.css";
 
-export default function Home(props) {
+export default function Home(props: { data: [] }) {
   // const [data, setData] = useState([]);
   const [history, setHistory] = useState([]);
   const [results, setResults] = useState([]);
@@ -151,7 +151,7 @@ export async function getStaticProps() {
   ).then(res => res.json());
   return {
     props: {
-      data: data.filter(item => item.use),
+      data: data.filter((item: { use: boolean }) => item.use),
     },
   };
 }

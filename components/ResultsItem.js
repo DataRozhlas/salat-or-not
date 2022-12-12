@@ -3,18 +3,13 @@ import styles from "../styles/ResultsItem.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-const imgLoader = ({ src, width, quality }) => {
-  return `https://data.irozhlas.cz/salat-or-not${src}-75.png`;
-};
-
 const ResultsItem = props => {
   return (
     <Link href={`/${props.candidate.key}`}>
       <div className={styles.container}>
         <Image
-          loader={imgLoader}
           className={styles.image}
-          src={`/img/${props.candidate.key}`}
+          src={`https://data.irozhlas.cz/salat-or-not/img/${props.candidate.key}-75.png`}
           alt={props.candidate.name}
           width={75}
           height={75}
