@@ -1,0 +1,24 @@
+.container {
+  padding: 0 0.5rem;
+  margin: -0.8rem 0;
+  text-align: center;
+}
+
+.note {
+  margin-top: -1rem;
+  padding-bottom: 0.25rem;
+  color: #333;
+}
+
+.grey {
+  color: #888;
+}
+
+.winner {
+  font-weight: 700;
+}
+
+.loser {
+  color: #888;
+  text-decoration: line-through;
+}
