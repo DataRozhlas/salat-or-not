@@ -34,39 +34,41 @@ const DetailsPage = props => {
     <>
       <Head>
         <title>
-          {`Průběžné výsledky ${candidateDetails.genitiv} v simulátoru druhého kola prezidentských voleb`}
+          {`Průběžné výsledky ${candidateDetails.genitiv} v rozstřelu bramborových salátů`}
         </title>
         <meta
           key="share-image"
           property="og:image"
-          content={`https://data.irozhlas.cz/hrad-or-not/img/${candidateDetails.key}-300.jpg`}
+          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_facebook/public/uploader/screen_shot_2022-12-_221213-141303_pek.png?itok=spfC2SIE"
         />
         <meta
           property="og:title"
-          content={`Průběžné výsledky ${candidateDetails.genitiv} v simulátoru druhého kola prezidentských voleb`}
+          content={`Průběžné výsledky ${candidateDetails.genitiv} v rozstřelu bramborových salátů`}
         />
         <meta
           property="og:url"
-          content={`https://data.irozhlas.cz/hrad-or-not/${candidateDetails.key}/`}
+          content="https://data.irozhlas.cz/salat-or-not/"
         />
         <meta
           property="og:description"
           content={
-            "Podívejte se, jak by podle naší ankety obstál/a ve druhém kole proti jiným kandidátům."
+            "Pobavte se interaktivním rozstřelem základních i obskurních ingrediencí do vánočního salátu. Anonymní data vyhodnotíme v objevných žebříčcích."
           }
         />
-
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@irozhlascz" />
+        <meta name="twitter:creator" content="@datarozhlas" />
         <meta
           name="twitter:title"
-          content={`Průběžné výsledky ${candidateDetails.genitiv} v simulátoru druhého kola prezidentských voleb`}
+          content={`Průběžné výsledky ${candidateDetails.genitiv} v rozstřelu bramborových salátů`}
         />
-
-        <meta name="twitter:site" content="@datarozhlas" />
-        <meta name="twitter:creator" content="@tocit" />
         <meta
           name="twitter:image"
-          content={`https://data.irozhlas.cz/hrad-or-not/img/${candidateDetails.key}-300.jpg`}
+          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_twitter/public/uploader/screen_shot_2022-12-_221213-141303_pek.png?itok=POguUL9s"
+        />
+        <meta
+          name="twitter:description"
+          content="Pobavte se interaktivním rozstřelem základních i obskurních ingrediencí do vánočního salátu. Anonymní data vyhodnotíme v objevných žebříčcích."
         />
       </Head>
       {candidateDetails && results.length > 0 && (
@@ -83,69 +85,9 @@ const DetailsPage = props => {
               className={styles.image}
               src={`https://data.irozhlas.cz/salat-or-not/img/${candidateDetails.key}-300.png`}
               alt={candidateDetails.name}
-              width={300}
-              height={300}
+              width={200}
+              height={200}
             ></Image>
-            <div className={styles.candidateInfo}>
-              <ul>
-                <h5 className={styles.bioSubtitle}>Základní údaje</h5>
-
-                <li>{candidateDetails.povolani}</li>
-                <li>
-                  {Math.floor(
-                    (Date.now() - Date.parse(candidateDetails.dob)) /
-                      31557600000
-                  )}{" "}
-                  let
-                </li>
-                <li>{candidateDetails.bydliste}</li>
-                <li>{candidateDetails.pob}</li>
-                <li>{candidateDetails.stav}</li>
-                {candidateDetails.deti && <li>{candidateDetails.deti}</li>}
-                {/* {candidateDetails.vyznani && (
-                  <li>{candidateDetails.vyznani}</li>
-                )} */}
-                {(candidateDetails.strana || candidateDetails.minulost) && (
-                  <h5 className={styles.bioSubtitle}>Politická příslušnost</h5>
-                )}
-                {candidateDetails.minulost && (
-                  <li>
-                    dříve: {candidateDetails.minulost.nazev}{" "}
-                    {candidateDetails.minulost.od &&
-                      candidateDetails.minulost.do &&
-                      `${candidateDetails.minulost.od} -
-                  ${candidateDetails.minulost.do}`}
-                  </li>
-                )}
-                {candidateDetails.strana && (
-                  <li>
-                    nyní: {candidateDetails.strana.nazev}
-                    {candidateDetails.strana.od &&
-                      `, od ${candidateDetails.strana.od}`}
-                  </li>
-                )}
-                <h5 className={styles.bioSubtitle}>Vzdělání</h5>
-                {candidateDetails.vzdelani &&
-                  candidateDetails.vzdelani.map((item, index) => {
-                    return (
-                      <li key={index}>
-                        {item.rok && `${item.rok} –`} {item.nazev}
-                        {item.obor && `, ${item.obor}`}
-                      </li>
-                    );
-                  })}
-              </ul>
-            </div>
-          </div>
-          <div className={styles.resultsContainer}>
-            <h3 className={styles.subtitle}>
-              {candidateDetails.dativ} se nejvíc daří proti
-            </h3>
-            <ResultsPanel
-              results={candidateResults.c}
-              dativ={true}
-              data={props.data}
-            ></ResultsPanel>
           </div>
           <div className={styles.buttonContainer}>
             <Link href="/vysledky">
@@ -153,6 +95,18 @@ const DetailsPage = props => {
                 Zpět na celkové výsledky
               </button>
             </Link>
+          </div>
+          <div className={styles.resultsContainer}>
+            <h3 className={styles.subtitle}>
+              {candidateDetails.dativ.charAt(0).toUpperCase() +
+                candidateDetails.dativ.slice(1)}{" "}
+              se nejvíc daří proti
+            </h3>
+            <ResultsPanel
+              results={candidateResults.c}
+              dativ={true}
+              data={props.data}
+            ></ResultsPanel>
           </div>
           <RelatedArticles tag={85699} name={"Vánocích"}></RelatedArticles>
         </div>

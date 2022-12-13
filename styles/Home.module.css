@@ -15,7 +15,7 @@
   text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
-  margin: 2.5rem 1rem;
+  margin: 2.5rem auto;
   cursor: pointer;
   line-height: 1.5rem;
 }
@@ -82,15 +82,18 @@
 
 .buttonContainer {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  max-width: 700px;
+  padding: 0;
+  margin: 0 auto;
 }
 
 .candidateProfileContainer {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  flex-direction: row;
   width: 100%;
   max-width: 700px;
   padding: 0;

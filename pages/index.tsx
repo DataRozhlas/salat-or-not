@@ -54,20 +54,23 @@ export default function Home(props: { data: [] }) {
         <meta
           property="og:description"
           content={
-            "Do aplikace jsme v první fázi zařadili kandidáty, kteří alespoň v jednom ze tří volebních modelů agentury Median dosáhli na 5 % hlasů a zároveň kandidaturu veřejně neodmítli."
+            "Pobavte se interaktivním rozstřelem základních i obskurních ingrediencí do vánočního salátu. Anonymní data vyhodnotíme v objevných žebříčcích."
           }
         />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@irozhlascz" />
+        <meta name="twitter:creator" content="@datarozhlas" />
         <meta
           name="twitter:title"
           content="Bramborový salát se syrečky, nebo radši avokádem? Pomozte najít přísady, které nás spojují a rozdělují"
         />
-
-        <meta name="twitter:site" content="@datarozhlas" />
-        <meta name="twitter:creator" content="@tocit" />
         <meta
           name="twitter:image"
           content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_twitter/public/uploader/screen_shot_2022-12-_221213-141303_pek.png?itok=POguUL9s"
+        />
+        <meta
+          name="twitter:description"
+          content="Pobavte se interaktivním rozstřelem základních i obskurních ingrediencí do vánočního salátu. Anonymní data vyhodnotíme v objevných žebříčcích."
         />
       </Head>
       {props.data.length > 0 && (

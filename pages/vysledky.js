@@ -22,41 +22,50 @@ export default function Vysledky(props) {
   return (
     <>
       <Head>
-        <title>Nejoblíbenější přísady do bramborového salátu</title>
+        <title>Nejoblíbenější ingredience do bramborového salátu</title>
         <meta
           key="share-image"
           property="og:image"
-          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_facebook/public/uploader/artboard_1_220703-181041_pek.jpg"
+          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_facebook/public/uploader/screen_shot_2022-12-_221213-141303_pek.png?itok=spfC2SIE"
         />
         <meta
           property="og:title"
-          content="Nejoblíbenější přísady do bramborového salátu"
+          content="Bramborový salát se syrečky, nebo radši avokádem? Pomozte najít přísady, které nás spojují a rozdělují"
         />
         <meta
           property="og:url"
-          content="https://data.irozhlas.cz/hrad-or-not/vysledky/"
+          content="https://data.irozhlas.cz/salat-or-not/"
         />
         <meta
           property="og:description"
-          content="Takto by dopadlo hlasování čtenářů iROZHLAS.cz. Také se do něj můžete zapojit."
+          content={
+            "Pobavte se interaktivním rozstřelem základních i obskurních ingrediencí do vánočního salátu. Anonymní data vyhodnotíme v objevných žebříčcích."
+          }
         />
-
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@irozhlascz" />
+        <meta name="twitter:creator" content="@datarozhlas" />
         <meta
           name="twitter:title"
-          content="Nejoblíbenější přísady do bramborového salátu"
+          content="Bramborový salát se syrečky, nebo radši avokádem? Pomozte najít přísady, které nás spojují a rozdělují"
         />
-
-        <meta name="twitter:site" content="@datarozhlas" />
-        <meta name="twitter:creator" content="@tocit" />
         <meta
           name="twitter:image"
-          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_twitter/public/uploader/artboard_1_220703-181041_pek.jpg"
+          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_twitter/public/uploader/screen_shot_2022-12-_221213-141303_pek.png?itok=POguUL9s"
+        />
+        <meta
+          name="twitter:description"
+          content="Pobavte se interaktivním rozstřelem základních i obskurních ingrediencí do vánočního salátu. Anonymní data vyhodnotíme v objevných žebříčcích."
         />
       </Head>
 
       <div className={styles.container}>
-        <Header text="Nejúspěšnější ingredience"></Header>
+        <Header text="Nejoblíbenější ingredience do bramborového salátu"></Header>
+        <div className={styles.buttonContainer}>
+          <Link href="/">
+            <button className={styles.button}>Zpět k hlasování</button>
+          </Link>
+        </div>
         <h3 className={`${styles.subtitle} ${styles.moveup}`}>
           Kliknutím na přísadu zobrazíte podrobnosti
         </h3>
@@ -65,11 +74,6 @@ export default function Vysledky(props) {
           dativ={false}
           data={props.data}
         ></ResultsPanel>
-        <div className={styles.buttonContainer}>
-          <Link href="/">
-            <button className={styles.button}>Zpět k hlasování</button>
-          </Link>
-        </div>
         <RelatedArticles tag={85699} name={"Vánocích"}></RelatedArticles>
       </div>
     </>
