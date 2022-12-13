@@ -1,3 +1,8 @@
 beta
 
+- texty
 - oprava sčítání výsledků, aby se znovu nezapočítaly všechny, pokud od minulého sčítání nic nepřibylo
+- CORS, aby šlo zapisovat do databáze jenom z https://data.irozhlas.cz
+- responsivita obrázků
+- FB a Twitter sharing images and texts
+- drobné úpravy layoutu a typografie
