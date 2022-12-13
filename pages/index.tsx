@@ -37,19 +37,19 @@ export default function Home(props: { data: [] }) {
   return (
     <>
       <Head>
-        <title>Simulátor druhého kola prezidentských voleb</title>
+        <title>Co patří do vánočního bramborového salátu?</title>
         <meta
           key="share-image"
           property="og:image"
-          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_facebook/public/uploader/artboard_1_220703-181041_pek.jpg"
+          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_facebook/public/uploader/screen_shot_2022-12-_221213-141303_pek.png?itok=spfC2SIE"
         />
         <meta
           property="og:title"
-          content="Simulátor druhého kola prezidentských voleb"
+          content="Bramborový salát se syrečky, nebo radši avokádem? Pomozte najít přísady, které nás spojují a rozdělují"
         />
         <meta
           property="og:url"
-          content="https://data.irozhlas.cz/hrad-or-not/"
+          content="https://data.irozhlas.cz/salat-or-not/"
         />
         <meta
           property="og:description"
@@ -60,14 +60,14 @@ export default function Home(props: { data: [] }) {
         <meta name="twitter:card" content="summary" />
         <meta
           name="twitter:title"
-          content="Simulátor druhého kola prezidentských voleb"
+          content="Bramborový salát se syrečky, nebo radši avokádem? Pomozte najít přísady, které nás spojují a rozdělují"
         />
 
         <meta name="twitter:site" content="@datarozhlas" />
         <meta name="twitter:creator" content="@tocit" />
         <meta
           name="twitter:image"
-          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_twitter/public/uploader/artboard_1_220703-181041_pek.jpg"
+          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_twitter/public/uploader/screen_shot_2022-12-_221213-141303_pek.png?itok=POguUL9s"
         />
       </Head>
       {props.data.length > 0 && (
