@@ -1,0 +1,3 @@
+beta
+
+- oprava sčítání výsledků, aby se znovu nezapočítaly všechny, pokud od minulého sčítání nic nepřibylo
