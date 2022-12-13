@@ -45,7 +45,7 @@ export default function Home(props: { data: [] }) {
         />
         <meta
           property="og:title"
-          content="Bramborový salát se syrečky, nebo radši avokádem? Pomozte najít přísady, které nás spojují a rozdělují"
+          content="Bramborový salát se syrečky, nebo radši s avokádem? Pomozte najít přísady, které nás spojují a rozdělují"
         />
         <meta
           property="og:url"
@@ -62,7 +62,7 @@ export default function Home(props: { data: [] }) {
         <meta name="twitter:creator" content="@datarozhlas" />
         <meta
           name="twitter:title"
-          content="Bramborový salát se syrečky, nebo radši avokádem? Pomozte najít přísady, které nás spojují a rozdělují"
+          content="Bramborový salát se syrečky, nebo radši s avokádem? Pomozte najít přísady, které nás spojují a rozdělují"
         />
         <meta
           name="twitter:image"
@@ -121,11 +121,11 @@ export default function Home(props: { data: [] }) {
               Ilustrace přísad jsme vytvořili v AI generátoru Stable Diffusion
               na základě zadání zmiňujících „československý grafický design“,
               což dává většině obrázků kýžený mírně pelíškovský vibe. Při tomto
-              průzkumu bojem vyšlo najevo, že je nástroj natrénovaný na
-              globálním datasetu není vhodný pro vizualizaci lokálních
-              specialit; omluvte proto nedůvěryhodnou podobu salámu Junior,
-              olomouckých syrečků a celerové bulvy. Ve všech případech jsme se k
-              alespoň přibližné podobě museli dostat složitým opisem.
+              průzkumu bojem vyšlo najevo, že nástroj natrénovaný na globálním
+              datasetu není vhodný pro vizualizaci lokálních specialit; omluvte
+              proto nedůvěryhodnou podobu salámu Junior, olomouckých syrečků a
+              celerové bulvy. Ve všech případech jsme se k alespoň přibližné
+              podobě museli dostat složitým opisem.
             </p>
           </div>
           <RelatedArticles tag={85699} name={"Vánocích"}></RelatedArticles>

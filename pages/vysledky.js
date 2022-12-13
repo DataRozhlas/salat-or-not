@@ -30,7 +30,7 @@ export default function Vysledky(props) {
         />
         <meta
           property="og:title"
-          content="Bramborový salát se syrečky, nebo radši avokádem? Pomozte najít přísady, které nás spojují a rozdělují"
+          content="Bramborový salát se syrečky, nebo radši s avokádem? Pomozte najít přísady, které nás spojují a rozdělují"
         />
         <meta
           property="og:url"
@@ -47,7 +47,7 @@ export default function Vysledky(props) {
         <meta name="twitter:creator" content="@datarozhlas" />
         <meta
           name="twitter:title"
-          content="Bramborový salát se syrečky, nebo radši avokádem? Pomozte najít přísady, které nás spojují a rozdělují"
+          content="Bramborový salát se syrečky, nebo radši s avokádem? Pomozte najít přísady, které nás spojují a rozdělují"
         />
         <meta
           name="twitter:image"
