@@ -3,7 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 0.5rem;
   padding-top: 1rem;
+  padding-bottom: 1rem;
   background-color: #fff;
   border: none;
   cursor: pointer;
@@ -20,11 +22,6 @@
 
 .candidateName {
   margin-bottom: 0;
-}
-
-.shortBio {
-  margin-top: 0.2rem;
-  max-width: 300px;
 }
 
 @media screen and (min-width: 700px) {

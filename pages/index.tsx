@@ -72,14 +72,11 @@ export default function Home(props: { data: [] }) {
       </Head>
       {props.data.length > 0 && (
         <div className={styles.container}>
-          <Header text="Co určitě patří do bramborového salátu?"></Header>
+          <Header text="Co patří do vánočního bramborového salátu?"></Header>
           <h3 className={styles.subtitle}>
             {history.length > 0
-              ? `Vyberte z další dvojice ingrediencí. Zbývá  ${
-                  (props.data.length ** 2 - props.data.length) / 2 -
-                  history.length
-                }`
-              : "Kliknětě na jednu z ingrediencí"}
+              ? `Vyberte další ingredienci`
+              : "Klikněte na jednu z ingrediencí"}
           </h3>
           <MainPanel
             data={props.data}
@@ -95,47 +92,37 @@ export default function Home(props: { data: [] }) {
             <Link href="/vysledky">
               <button className={`${styles.button} ${styles[greyStyle]}`}>
                 Zobrazit výsledky hlasování<br></br>
-                <span className={styles.buttonSmall}>čtenářů iROZHLAS.cz</span>
+                <span className={styles.buttonSmall}>
+                  čtenářů a čtenářek iROZHLAS.cz
+                </span>
               </button>
             </Link>
           </div>
           <div className={styles.text}>
-            <h3>Výběr kandidátů</h3>
             <p>
-              Do aplikace jsme v první fázi zařadili kandidáty, kteří alespoň v
-              jednom ze tří volebních modelů agentury Median publikovaných v{" "}
-              <a
-                href="https://www.median.eu/cs/wp-content/uploads/2022/03/Volby_prezident_2022_02_v05MK.pdf"
-                target="_blank"
-                rel="noreferrer"
-              >
-                březnu
-              </a>
-              ,{" "}
-              <a
-                href="https://www.median.eu/cs/wp-content/uploads/2022/04/Volby_prezident_2022_03_v04IC.pdf"
-                target="_blank"
-                rel="noreferrer"
-              >
-                dubnu
-              </a>{" "}
-              a{" "}
-              <a
-                href="https://www.median.eu/cs/wp-content/uploads/2022/06/Volby_prezident_2022_05_v04IC.pdf"
-                target="_blank"
-                rel="noreferrer"
-              >
-                červnu
-              </a>{" "}
-              dosáhli na 5 % hlasů a zároveň kandidaturu veřejně neodmítli.
-              Další uchazeče budeme podle stejných kritérií doplňovat až do
-              potvrzení oficiálních kandidátek.
+              Z různých receptů na bramborový salát jsme vybrali 43 přísad.
+              Některé jsou těžko nahraditelné, typicky brambory. Některé jsou
+              dlouhodobě kontroverzní, například měkký či tvrdý salám. A některé
+              leží za hranicí společenských konvencí, třeba tvarůžky nebo
+              avokádo.
             </p>
             <p>
-              První kolo prezidentských voleb se koná 13. a 14. ledna 2023.
-              Pokud v něm nikdo nezíská 50 % hlasů, ze dvou nejúspěšnějších se
-              bude definitivně vybírat 27. a 28. ledna. Volební období Miloše
-              Zemana skončí 8. března.
+              V přímém souboji 1:1 můžete do omrzení vybírat, co se vám v
+              chutném nebo alespoň poživatelném bramborovém salátu představuje
+              snáze. Redakce serveru iROZHLAS.cz výsledky všech duelů
+              zaznamenává. Vyhodnotí je a výsledný žebříček zveřejní ještě před
+              Štědrým dnem, aby šlo data využít k racionální argumentaci při
+              svátečních setkáních.
+            </p>
+            <p>
+              Ilustrace přísad jsme vytvořili v AI generátoru Stable Diffusion
+              na základě zadání zmiňujících „československý grafický design“,
+              což dává většině obrázků kýžený mírně pelíškovský vibe. Při tomto
+              průzkumu bojem vyšlo najevo, že je nástroj natrénovaný na
+              globálním datasetu není vhodný pro vizualizaci lokálních
+              specialit; omluvte proto nedůvěryhodnou podobu salámu Junior,
+              olomouckých syrečků a celerové bulvy. Ve všech případech jsme se k
+              alespoň přibližné podobě museli dostat složitým opisem.
             </p>
           </div>
           <RelatedArticles tag={85699} name={"Vánocích"}></RelatedArticles>
